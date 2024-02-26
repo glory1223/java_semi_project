@@ -13,8 +13,8 @@ public class TwinRoomReservation extends RoomReservation{
     @Override
     public void payRoomInfo() {
         if (reservationDay >= 3) {
-            System.out.println(" <" + roomType + "> " + "가격: " + price + " 만원 " +  " 조식제공여부: " + serveBreakfast);
-            System.out.println("지불할 금액: " + ((int)(price * reservationDay) * people * 0.9 )+ "만원");
+            System.out.println(" <" + roomType + "> " + "가격: " + (price * 10000 ) + " 원 " +  " 조식제공여부: " + serveBreakfast);
+            System.out.println("지불할 금액: " + ((int)(price * reservationDay) * people * 0.9 ) * 10000+ "원");
         }
         else  this.showRoomInfo();
 

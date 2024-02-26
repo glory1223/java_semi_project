@@ -2,7 +2,7 @@ package semi01.project;
 
 public class RoomReservation {
 
-    String name;//예약자명
+    public String name;//예약자명
     int reservationDay;//예약일수
     String reservationRoom;//예약할룸
     int people; //인원
@@ -43,21 +43,21 @@ serveBreakfast = "없음";
 
     //예약후 지불해야할 금액과 예약 내역
     public void payRoomInfo() {
-        System.out.println(" <" + roomType + "> " + "가격: " + price + " 만원 " +  " 조식제공여부: " + serveBreakfast);
-        System.out.println("지불할 금액: " + (price * reservationDay) * people + "만원");
+        System.out.println(" <" + roomType + "> " + "가격: " + ( price *10000 )+ " 원 " +  " 조식제공여부: " + serveBreakfast);
+        System.out.println("지불할 금액: " + (price * reservationDay) * people * 10000 + "원");
     }
 
 
     //해당 룸의 정보
     public void showRoomInfo() {
-        if(serveBreakfast != null) System.out.println(" <" + roomType + "> " + "가격: " + price + " 만원 " + "인원제한: " + rangePeople +"명 " + " 조식제공여부: " + serveBreakfast);
-         else System.out.println(" <" + roomType + "> " + "가격: " + price + " 만원 " + "인원제한: " + rangePeople +"명 " + " 조식제공여부: 없음");
+        if(serveBreakfast != null) System.out.println(" <" + roomType + "> " + "가격: " + (price * 10000)+ " 원 " + "인원제한: " + rangePeople +"명 " + " 조식제공여부: " + serveBreakfast);
+         else System.out.println(" <" + roomType + "> " + "가격: " + (price * 10000) + " 원 " + "인원제한: " + rangePeople +"명 " + " 조식제공여부: 없음");
     }
 
     //해당! 고객의 예약 정보
-        public String showCustomerInfo() {
-        if(serveBreakfast != null)   return "<" + roomType  + "> " + "예약일수: " + rangePeople + " 조식제공여부: " + serveBreakfast;
-        else  return "<" + roomType  + "> " + "예약일수: " + rangePeople + " 조식제공여부: 없음";
+        public void showCustomerInfo() {
+        if(serveBreakfast != null) System.out.println("<" + roomType  + "> " + "예약일수: " + reservationDay + " 조식제공여부: " + serveBreakfast);
+        else System.out.println("<" + roomType  + "> " + "예약일수: " + rangePeople + " 조식제공여부: 없음");
 
     }
 
