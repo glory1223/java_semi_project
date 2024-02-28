@@ -4,6 +4,7 @@ import studentInfo.project.school.School;
 import studentInfo.project.school.Score;
 import studentInfo.project.school.Student;
 import studentInfo.project.school.Subject;
+import studentInfo.project.school.report.GenerateGradeReport;
 import studentInfo.project.utils.Define;
 
 public class StudentInfoApplication {
@@ -13,13 +14,18 @@ public class StudentInfoApplication {
     Subject korean; // 국어과목
     Subject math; // 수학과목
 
+    GenerateGradeReport gradeReport = new GenerateGradeReport();
+
+
     public static void main(String[] args) {
         StudentInfoApplication app = new StudentInfoApplication();
 
-        app.createSubject();
+        app.createSubject(); //과목개설 , 과목 학교에 등록
         app.createStudent();
 
         //성적 결과 생성해서 출력
+        String report = app.gradeReport.getReport();
+        System.out.println(report);
     }
     //과목 생성하는 메소드
     public void createSubject() { //static이 없기때문에 메인메소드에서 객체 생성하고 사용할수있음
@@ -63,17 +69,17 @@ public class StudentInfoApplication {
         addScoreForStudent(student1, korean, 95);
         addScoreForStudent(student1, math, 56);
 
-        addScoreForStudent(student1, korean, 95);
-        addScoreForStudent(student1, math, 98);
+        addScoreForStudent(student2, korean, 95);
+        addScoreForStudent(student2, math, 98);
 
-        addScoreForStudent(student1, korean, 100);
-        addScoreForStudent(student1, math, 88);
+        addScoreForStudent(student3, korean, 100);
+        addScoreForStudent(student3, math, 88);
 
-        addScoreForStudent(student1, korean, 89);
-        addScoreForStudent(student1, math, 95);
+        addScoreForStudent(student4, korean, 89);
+        addScoreForStudent(student4, math, 95);
 
-        addScoreForStudent(student1, korean, 83);
-        addScoreForStudent(student1, math, 56);
+        addScoreForStudent(student5, korean, 83);
+        addScoreForStudent(student5, math, 56);
     }
 
     //학생별로 과목별(수학, 국어) 점수 추가

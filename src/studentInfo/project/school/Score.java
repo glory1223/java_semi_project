@@ -9,12 +9,13 @@ public class Score {
 
         private int point; // 점수
 
-        public Score (int studentId,Subject subject, int point) {
+        public Score (int studentId, Subject subject, int point) {
             this.studentId = studentId;
             this.subject = subject;
             this.point = point;
         }
 
+        //객체의 주소가 아닌 객체의 정보를 출력해주는기능.
         @Override
         public String toString() {
             return "학번: " + this.studentId + ", " + subject.getSubjectName() + ": " + point;

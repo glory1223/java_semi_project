@@ -13,7 +13,7 @@ public class School {
     //1. 싱글톤으로 사용할 객체를 private static 키워드로 붙여서 선언한다 (해당클래스의 static에서만 공유)
     private static School instance = null; //아무것도참조하지않음(객체를 참조하지않음)
 
-    //2. 싱글톤은 생성자에 private ?? -> 외부클래스에서  School 객체를 생성할수 없게 만든다,
+        //2. 싱글톤은 생성자에 private ?? -> 외부클래스에서  School 객체를 생성할수 없게 만든다,
     private School() {}
 
     //3. 싱글톤 객체를 생성하는 메소드 구현
