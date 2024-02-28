@@ -1,8 +1,7 @@
 package studentInfo.project.school;
 
+//어느 학생의 어느 과목 점수가 몇점이다.
 public class Score {
-
-    //어느 학생의 어느 과목 점수가 몇점이다.
 
         private int studentId; //학번
 

@@ -1,5 +1,7 @@
 package studentInfo.project.school;
 
+import studentInfo.project.utils.Define;
+
 import java.util.ArrayList;
 
 public class Subject {
@@ -14,7 +16,7 @@ public class Subject {
     public Subject(String subjectName, int subjectId) {
         this.subjectName = subjectName;
         this.subjectId = subjectId;
-//        this.gradeType = gradeType;
+        this.gradeType = Define.AB_TYPE; //학점 평가 정책: 기본으로 A,B
     }
 
 
