@@ -98,7 +98,6 @@ public class GenerateGradeReport {
                 buffer.append(":");
                 buffer.append(grade);
                 buffer.append(" | ");
-//내꺼
 
 
             }
